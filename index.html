@@ -25,6 +25,19 @@
         <a id="infobutton" title="Instructions" onclick="info()" style="text-decoration: none"><img src="assets/info.png" alt="Info" height="30"></a>
       </div>
       <div id="main_container" class="main_container">
+        <div class="bottom">
+            <input
+              id="input"
+              type="number"
+              oninput="validateInput()"
+              placeholder="Put your guess here"
+            />
+            <div class="buttons">
+              <button id="restart" onclick="restart()">Restart</button>
+              <button id="check" onclick="check()">Check</button>
+            </div>
+          </div>
+        
         <div class="top">
           <div class="left">
             <li style="text-decoration: none; color: #a6b7d4" id="correct_nums">
@@ -60,18 +73,7 @@
           </div>
           <!-- <ol reversed id="list_for_guessed"></ol> -->
         </div>
-        <div class="bottom">
-          <input
-            id="input"
-            type="number"
-            oninput="validateInput()"
-            placeholder="Put your guess here"
-          />
-          <div class="buttons">
-            <button id="restart" onclick="restart()">Restart</button>
-            <button id="check" onclick="check()">Check</button>
-          </div>
-        </div>
+        
       </div>
       <div id="info" class="info">
         <h1>Numbers Game</h1>

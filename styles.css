@@ -77,6 +77,8 @@ body {
   font-size: 60px;
   text-align: center;
   color: rgba(249, 93, 71, 0.75);
+  align-self: flex-start;
+  padding-left: 50px;
 }
 
 .info h2 {
@@ -84,12 +86,15 @@ body {
   font-style: italic;
   padding-left: 50px;
   color: rgba(249, 93, 71, 0.75);
+  align-self: flex-start;
+  padding-left: 50px;
 }
 
 .info p {
   font-size: 30px;
   text-align: justify;
   padding: 30px;
+  align-self: flex-start;
 }
 
 .info h3 {
