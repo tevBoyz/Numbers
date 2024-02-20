@@ -1,0 +1,694 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+
+  background-color: rgba(249, 93, 71, 0.75);
+}
+
+.nav h1 {
+  padding-left: 20px;
+  color: white;
+}
+
+.nav a {
+  height: 45px;
+  width: 45px;
+  margin-right: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: rgba(249, 93, 71, 0.75);
+}
+
+.main_container {
+  width: 100%;
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info {
+  width: 100%;
+  flex: 9;
+  display: none;
+  align-items: center;
+  margin: 30px;
+}
+
+.info h1 {
+  font-size: 80px;
+  text-align: center;
+  color: rgba(249, 93, 71, 0.75);
+}
+
+.info h2 {
+  font-size: 50px;
+  font-style: italic;
+  padding-left: 50px;
+  color: rgba(249, 93, 71, 0.75);
+}
+
+.info p {
+  font-size: 35px;
+  text-align: justify;
+  padding: 30px;
+}
+
+.info h3 {
+  font-size: 100px;
+  text-align: center;
+  color: rgba(249, 93, 71, 0.75);
+}
+
+.top {
+  width: 100%;
+  flex: 1 0 300px;
+  border: 1px solid black;
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 50px;
+  margin: 10px;
+  border: 1px solid lightblue;
+}
+
+.left li {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.lable {
+  height: 30px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: left;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgba(249, 93, 71, 0.75);
+  border-radius: 50%;
+  box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
+}
+
+.circle h1 {
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.middle {
+  width: 100%;
+  flex: 1 0 280px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle h2 {
+  font-family: "Inter", sans-serif;
+  padding-left: 20px;
+  align-self: flex-start;
+}
+
+#list_for_guessed {
+  width: 90%;
+  max-height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: lightblue;
+  display: flex;
+  flex-direction: column;
+}
+
+#list_for_guessed::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#list_for_guessed li {
+  width: 80%;
+  height: 40px;
+  background-color: #fbf7f7;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 30px;
+}
+
+.bottom {
+  width: 100%;
+  flex: 1 0 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input {
+  width: 60%;
+  height: 80px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  width: 150px;
+  height: 60px;
+  border-radius: 42px;
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 4px black;
+}
+
+button:hover {
+  background-color: rgba(249, 93, 71, 0.75);
+  color: white;
+}
+
+.congrats {
+  width: 50%;
+  height: 50%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(249, 93, 71, 0.75);
+  box-shadow: 4px 6px rgba(249, 93, 71, 0.75);
+  border-radius: 50%;
+}
+
+.congrats h2 {
+  font-size: 60px;
+  color: lightgreen;
+}
+
+.congrats p {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.congrats h1 {
+  font-size: 60px;
+  color: aqua;
+}
+
+.table_prev {
+  width: 98%;
+  max-height: 90%;
+  flex: 3;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+}
+
+td {
+  text-align: center;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 2000px) {
+  .main {
+    height: 70vh;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .main {
+    height: 80vh;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .main {
+    height: 85vh;
+    width: 90%;
+  }
+
+  .top {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    flex: 1;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+    margin: 10px;
+    border: 1px solid lightblue;
+  }
+
+  .left li {
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    list-style: none;
+  }
+
+  .lable {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(249, 93, 71, 0.75);
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
+    margin: 10px;
+  }
+
+  .circle h1 {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .middle {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+  }
+
+  .middle h2 {
+    font-family: "Inter", sans-serif;
+    padding-left: 20px;
+  }
+
+  #list_for_guessed {
+    width: 95%;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: lightblue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #list_for_guessed::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  #list_for_guessed li {
+    width: 90%;
+    height: 40px;
+    background-color: #fbf7f7;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    height: 85vh;
+    width: 90%;
+  }
+
+  .top {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    flex: 1;
+    min-height: 50px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    margin: 10px;
+    border: 1px solid lightblue;
+  }
+
+  .left li {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  .lable {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+  .right {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(249, 93, 71, 0.75);
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
+    margin: 10px;
+  }
+
+  .circle h1 {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .middle {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+  }
+
+  .middle h2 {
+    font-family: "Inter", sans-serif;
+    padding-left: 20px;
+  }
+
+  #list_for_guessed {
+    width: 95%;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: lightblue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #list_for_guessed::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  #list_for_guessed li {
+    width: 90%;
+    height: 40px;
+    background-color: #fbf7f7;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 25px;
+  }
+  .table_prev {
+    width: 98%;
+    height: 90%;
+    flex: 3;
+    border: 1px solid black;
+    overflow-y: scroll;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+  }
+
+  td {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #input {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .main {
+    height: 85vh;
+    width: 90%;
+  }
+
+  .top {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    flex: 1;
+    min-height: 50px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid lightblue;
+  }
+
+  .left li {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  .lable {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    height: 280px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(249, 93, 71, 0.75);
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
+    margin: 10px;
+  }
+
+  .circle h1 {
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .middle {
+    width: 100%;
+    flex: 1 0 200px;
+    border: 1px solid black;
+  }
+
+  .middle h2 {
+    font-family: "Inter", sans-serif;
+    padding-left: 20px;
+  }
+
+  #list_for_guessed {
+    width: 95%;
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: lightblue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #list_for_guessed::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  #list_for_guessed li {
+    width: 90%;
+    height: 40px;
+    background-color: #fbf7f7;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .table_prev {
+    width: 98%;
+    height: 90%;
+    flex: 3;
+    border: 1px solid black;
+    overflow-y: scroll;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+  }
+
+  td {
+    text-align: center;
+    font-size: 18px;
+  }
+  #input {
+    font-size: 15px;
+  }
+}
