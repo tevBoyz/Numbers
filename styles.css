@@ -247,8 +247,9 @@ button:hover {
 }
 
 .congrats {
-  width: 50%;
-  height: 50%;
+  width: 700px;
+  height: 700px;
+  margin-top: 50px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -260,7 +261,7 @@ button:hover {
 
 .congrats h2 {
   font-size: 60px;
-  color: lightgreen;
+  color: rgba(249, 93, 71, 0.75);
 }
 
 .congrats p {
@@ -270,7 +271,7 @@ button:hover {
 
 .congrats h1 {
   font-size: 60px;
-  color: aqua;
+  color: rgba(249, 93, 71, 0.75);
 }
 
 .table_prev {
@@ -555,6 +556,33 @@ td {
   #input {
     font-size: 20px;
   }
+  .congrats {
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(249, 93, 71, 0.75);
+    box-shadow: 4px 6px rgba(249, 93, 71, 0.75);
+    border-radius: 50%;
+  }
+
+  .congrats h2 {
+    font-size: 40px;
+    color: rgba(249, 93, 71, 0.75);
+  }
+
+  .congrats p {
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  .congrats h1 {
+    font-size: 40px;
+    color: rgba(249, 93, 71, 0.75);
+  }
 }
 
 @media only screen and (max-width: 610px) {
@@ -690,5 +718,33 @@ td {
   }
   #input {
     font-size: 15px;
+  }
+
+  .congrats {
+    width: 300px;
+    height: 300px;
+    margin-top: 300px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(249, 93, 71, 0.75);
+    box-shadow: 4px 6px rgba(249, 93, 71, 0.75);
+    border-radius: 50%;
+  }
+
+  .congrats h2 {
+    font-size: 20px;
+    color: rgba(249, 93, 71, 0.75);
+  }
+
+  .congrats p {
+    font-size: 25px;
+    font-style: italic;
+  }
+
+  .congrats h1 {
+    font-size: 20px;
+    color: rgba(249, 93, 71, 0.75);
   }
 }
