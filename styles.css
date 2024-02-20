@@ -279,6 +279,14 @@ button:hover {
   color: rgba(249, 93, 71, 0.75);
 }
 
+.triesDisp {
+  font-size: 15px !important;
+}
+
+#finaltries {
+  font-size: 15px !important;
+}
+
 .table_prev {
   max-height: 250px;
   width: 85%;
@@ -499,6 +507,14 @@ tr {
     font-size: 40px;
     color: rgba(249, 93, 71, 0.75);
   }
+
+  .triesDisp {
+    font-size: 15px !important;
+  }
+
+  #finaltries {
+    font-size: 15px !important;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -683,6 +699,14 @@ tr {
   .congrats h1 {
     font-size: 20px;
     color: rgba(249, 93, 71, 0.75);
+  }
+
+  .triesDisp {
+    font-size: 15px !important;
+  }
+
+  #finaltries {
+    font-size: 15px !important;
   }
 
   .info {
@@ -901,6 +925,14 @@ tr {
   .congrats h1 {
     font-size: 20px;
     color: rgba(249, 93, 71, 0.75);
+  }
+
+  .triesDisp {
+    font-size: 12px !important;
+  }
+
+  #finaltries {
+    font-size: 12px !important;
   }
 }
 

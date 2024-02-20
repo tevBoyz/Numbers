@@ -81,6 +81,7 @@ function check(){
             document.getElementById("main").style.display = "none";
             document.getElementById("congrats").style.display = "flex";
             document.getElementById("corres").innerHTML = curr_num;
+            document.getElementById("finaltries").innerHTML = guessed.length;
         }
     }
     else{
@@ -145,7 +146,7 @@ function validateInput() {
 
   function info(){
     if(document.getElementById('info').style.display == 'none'){
-        document.getElementById('info').style.display = 'block';
+        document.getElementById('info').style.display = 'flex';
         document.getElementById('infobutton').style.backgroundColor = 'white';
         document.getElementById('infobutton').style.color = 'rgba(249, 93, 71, 0.75)';
         document.getElementById('main_container').style.display = 'none';
