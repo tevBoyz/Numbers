@@ -5,6 +5,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   font-family: "Inter", sans-serif;
+  background-color: #faf0f0;
 }
 
 .main {
