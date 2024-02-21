@@ -25,21 +25,11 @@ input.addEventListener("keypress", function(event) {
 
 function addRow(number, cn, cp){
     guessed.push(number);
-    // const text = guessed.length +". " + number + " - Correct Numbers: " + cn + " - Correct Positions: " + cp;
     var new_content = "<tr> <td>"+ guessed.length +"</td> <td>"+ number +"</td> <td>"+ cn +"</td> <td>"+ cp + "</td> </tr>";
     var new_row = mytable.insertRow(0);
     new_row.innerHTML = new_content;
-    //change(text);
     trials.innerHTML = guessed.length;
 }
-
-// function change(txt) {
-//     var x=document.getElementById("list_for_guessed");
-//     newLI = document.createElementNS(null,"li");
-//     newText = document.createTextNode(txt);
-//     newLI.appendChild(newText);
-//     x.appendChild(newLI);
-//     }
 
 function displayOnDisplay(num, cn, cp){
     mydisplay.innerHTML = (num);
