@@ -212,6 +212,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 input::-webkit-outer-spin-button,
@@ -227,6 +228,8 @@ input {
   border: 1px solid #f5f9ff;
   border-radius: 20px;
   margin-bottom: 40px;
+  background-color: #f5f9ff;
+  border: 1px solid #f95d47;
 }
 
 .buttons {
@@ -249,6 +252,7 @@ button {
   border: none;
   background-color: white;
   box-shadow: 2px 2px gray;
+  background-color: #f5f9ff;
 }
 
 button:hover {
@@ -328,7 +332,14 @@ tr {
   border: 1px solid black;
 }
 
-@media only screen and (max-width: 750px) {
+.timer-cont {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 790px) {
   .main {
     height: 100vh;
     width: 100%;
@@ -344,7 +355,7 @@ tr {
     flex: 1 0 300px;
     border-radius: 10px;
     margin: 20px;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -405,7 +416,7 @@ tr {
 
   .table_prev {
     width: 90%;
-    max-height: 250px;
+    max-height: 550px;
     flex: 3;
     overflow-y: scroll;
   }
@@ -434,13 +445,18 @@ tr {
     border: 1px solid black;
   }
 
+  .middle {
+    flex: 1 0 650px;
+  }
+
   .bottom {
     width: 90%;
-    flex: 1 0 280px;
+    flex: 1 0 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 30px;
   }
 
   input::-webkit-outer-spin-button,
@@ -538,7 +554,7 @@ tr {
     flex: 1 0 300px;
     border-radius: 10px;
     margin: 20px;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -598,7 +614,7 @@ tr {
 
   .table_prev {
     width: 90%;
-    max-height: 90%;
+    max-height: 550px;
     flex: 3;
     overflow-y: scroll;
   }
@@ -627,12 +643,16 @@ tr {
     border: 1px solid black;
   }
 
+  .middle {
+    flex: 1 0 650px;
+  }
+
   .bottom {
     width: 90%;
-    flex: 1 0 280px;
+    flex: 1 0 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -764,7 +784,7 @@ tr {
     flex: 1 0 300px;
     border-radius: 10px;
     margin: 20px;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -940,449 +960,3 @@ tr {
     font-size: 12px !important;
   }
 }
-
-/* 
-@media only screen and (max-width: 1550px) {
-  .main {
-    height: 80vh;
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .main {
-    height: 85vh;
-    width: 90%;
-  }
-
-  .top {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .left {
-    flex: 1;
-    height: 90%;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 20px;
-    margin: 10px;
-    border: 1px solid lightblue;
-  }
-
-  .left li {
-    margin-left: 40px;
-    font-size: 20px;
-    font-weight: 900;
-    list-style: none;
-  }
-
-  .lable {
-    height: 30px;
-    font-size: 20px;
-    font-weight: 800;
-    text-align: left;
-    padding-top: 0px;
-    margin-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-  }
-
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle {
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid rgba(249, 93, 71, 0.75);
-    border-radius: 50%;
-    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
-    margin: 10px;
-  }
-
-  .circle h1 {
-    font-family: "Actor", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .middle {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-  }
-
-  .middle h2 {
-    font-family: "Inter", sans-serif;
-    padding-left: 20px;
-  }
-
-  #list_for_guessed {
-    width: 95%;
-    max-height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: lightblue;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #list_for_guessed::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-
-  #list_for_guessed li {
-    width: 90%;
-    height: 40px;
-    background-color: #fbf7f7;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 25px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .main {
-    height: 85vh;
-    width: 90%;
-  }
-
-  .top {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .left {
-    flex: 1;
-    min-height: 50px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 20px;
-    margin: 10px;
-    border: 1px solid lightblue;
-  }
-
-  .left li {
-    margin-left: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    list-style: none;
-  }
-
-  .lable {
-    height: 30px;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: left;
-    padding-top: 0px;
-    margin-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-  }
-
-  .right {
-    flex: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle {
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid rgba(249, 93, 71, 0.75);
-    border-radius: 50%;
-    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
-    margin: 10px;
-  }
-
-  .circle h1 {
-    font-family: "Actor", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .middle {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-  }
-
-  .middle h2 {
-    font-family: "Inter", sans-serif;
-    padding-left: 20px;
-  }
-
-  #list_for_guessed {
-    width: 95%;
-    max-height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: lightblue;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #list_for_guessed::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-
-  #list_for_guessed li {
-    width: 90%;
-    height: 40px;
-    background-color: #fbf7f7;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 25px;
-  }
-  .table_prev {
-    width: 98%;
-    height: 90%;
-    flex: 3;
-    border: 1px solid black;
-    overflow-y: scroll;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  th {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    font-size: 18px;
-  }
-
-  td {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  #input {
-    font-size: 20px;
-  }
-  .congrats {
-    width: 500px;
-    height: 500px;
-    margin-top: 50px;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgba(249, 93, 71, 0.75);
-    box-shadow: 4px 6px rgba(249, 93, 71, 0.75);
-    border-radius: 50%;
-  }
-
-  .congrats h2 {
-    font-size: 40px;
-    color: rgba(249, 93, 71, 0.75);
-  }
-
-  .congrats p {
-    font-size: 25px;
-    font-style: italic;
-  }
-
-  .congrats h1 {
-    font-size: 40px;
-    color: rgba(249, 93, 71, 0.75);
-  }
-}
-
-@media only screen and (max-width: 610px) {
-  .main {
-    height: 85vh;
-    width: 90%;
-  }
-
-  .top {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .left {
-    flex: 1;
-    min-height: 50px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid lightblue;
-  }
-
-  .left li {
-    margin-left: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    list-style: none;
-  }
-
-  .lable {
-    height: 30px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: left;
-    padding-top: 0px;
-    margin-top: 0px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-  }
-
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .circle {
-    height: 280px;
-    width: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid rgba(249, 93, 71, 0.75);
-    border-radius: 50%;
-    box-shadow: 5px 5px rgba(249, 93, 71, 0.75);
-    margin: 10px;
-  }
-
-  .circle h1 {
-    font-family: "Actor", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .middle {
-    width: 100%;
-    flex: 1 0 200px;
-    border: 1px solid black;
-  }
-
-  .middle h2 {
-    font-family: "Inter", sans-serif;
-    padding-left: 20px;
-  }
-
-  #list_for_guessed {
-    width: 95%;
-    max-height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: lightblue;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #list_for_guessed::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-
-  #list_for_guessed li {
-    width: 90%;
-    height: 40px;
-    background-color: #fbf7f7;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 20px;
-  }
-
-  .table_prev {
-    width: 98%;
-    height: 90%;
-    flex: 3;
-    border: 1px solid black;
-    overflow-y: scroll;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  th {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    font-size: 16px;
-  }
-
-  td {
-    text-align: center;
-    font-size: 18px;
-  }
-  #input {
-    font-size: 15px;
-  }
-
-  .congrats {
-    width: 300px;
-    height: 300px;
-    margin-top: 300px;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgba(249, 93, 71, 0.75);
-    box-shadow: 4px 6px rgba(249, 93, 71, 0.75);
-    border-radius: 50%;
-  }
-
-  .congrats h2 {
-    font-size: 20px;
-    color: rgba(249, 93, 71, 0.75);
-  }
-
-  .congrats p {
-    font-size: 25px;
-    font-style: italic;
-  }
-
-  .congrats h1 {
-    font-size: 20px;
-    color: rgba(249, 93, 71, 0.75);
-  }
-} */
