@@ -30,8 +30,11 @@
               id="input"
               type="number"
               oninput="validateInput()"
-              placeholder="Put your guess here"
+              placeholder="Guess Here..."
             />
+            <div id="timer-cont" class="timer-cont">
+              <span>Timer</span>
+            </div>
             <div class="buttons">
               <button id="restart" onclick="restart()">Restart</button>
               <button id="check" onclick="check()">Check</button>
@@ -90,6 +93,7 @@
       <p>The Number is</p>
       <h1 id="corres"></h1>
       <p class="triesDisp">Number of tries: <span id="finaltries"></span></p>
+      <p class="triesDisp">Time taken: <span id="timetaken"></span></p>
       <button onclick="back()">Back</button>
     </div>
 
