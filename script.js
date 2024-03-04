@@ -8,6 +8,8 @@ var curr_num;
 var res = [-1, -1, -1];
 var guessed = []
 
+var time = 0;
+var timer = '';
 
 var num_to_Guess = random4Digit();
 // var num_to_Guess = 2134;
@@ -25,21 +27,11 @@ input.addEventListener("keypress", function(event) {
 
 function addRow(number, cn, cp){
     guessed.push(number);
-    // const text = guessed.length +". " + number + " - Correct Numbers: " + cn + " - Correct Positions: " + cp;
     var new_content = "<tr> <td>"+ guessed.length +"</td> <td>"+ number +"</td> <td>"+ cn +"</td> <td>"+ cp + "</td> </tr>";
     var new_row = mytable.insertRow(0);
     new_row.innerHTML = new_content;
-    //change(text);
     trials.innerHTML = guessed.length;
 }
-
-// function change(txt) {
-//     var x=document.getElementById("list_for_guessed");
-//     newLI = document.createElementNS(null,"li");
-//     newText = document.createTextNode(txt);
-//     newLI.appendChild(newText);
-//     x.appendChild(newLI);
-//     }
 
 function displayOnDisplay(num, cn, cp){
     mydisplay.innerHTML = (num);
@@ -78,10 +70,12 @@ function check(){
         else{
             displayOnDisplay(curr_num, res[2], res[1]);
             addRow(curr_num, res[2], res[1]);
+            clearInterval(timer);
             document.getElementById("main").style.display = "none";
             document.getElementById("congrats").style.display = "flex";
             document.getElementById("corres").innerHTML = curr_num;
             document.getElementById("finaltries").innerHTML = guessed.length;
+            document.getElementById("timetaken").innerHTML = `${time}s`;
         }
     }
     else{
@@ -176,3 +170,14 @@ function validateInput() {
       return o;
   }
   
+
+  function startTimer(){
+    var timerEl = document.getElementById("timer-cont");
+    timerEl.innerHTML = `<span>Time elapsed: ${time}</span>`
+    timer = setInterval(() => {
+            let cont = `<span>Time elapsed: ${++time}s</span>`;
+            timerEl.innerHTML = cont;
+    }, 1000);
+  }
+
+window.onload(startTimer());
