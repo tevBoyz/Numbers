@@ -56,7 +56,6 @@ function compare(guessed_num){
 
 
 function check(){
-    console.log(num_to_Guess);
     curr_num = document.getElementById("input").value;
     if (curr_num >= 1000 && curr_num <= 9999){
         document.getElementById("input").classList.remove("red")
