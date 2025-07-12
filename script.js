@@ -1,9 +1,6 @@
 // var mytable = document.getElementById("list_for_guessed");
 var mytable = document.getElementById("table_history").getElementsByTagName('tbody')[0];
 var mydisplay = document.getElementById("num_display");
-var correct_nums = document.getElementById("correct_nums");
-var correct_pos = document.getElementById("correct_pos");
-var trials = document.getElementById("tries");
 var curr_num;
 var res = [-1, -1, -1];
 var guessed = []
@@ -30,13 +27,6 @@ function addRow(number, cn, cp){
     var new_content = "<tr> <td>"+ guessed.length +"</td> <td>"+ number +"</td> <td>"+ cn +"</td> <td>"+ cp + "</td> </tr>";
     var new_row = mytable.insertRow(0);
     new_row.innerHTML = new_content;
-    trials.innerHTML = guessed.length;
-}
-
-function displayOnDisplay(num, cn, cp){
-    mydisplay.innerHTML = (num);
-    correct_nums.innerHTML =  cn;
-    correct_pos.innerHTML =  cp;
 }
 
 function compare(guessed_num){
@@ -61,7 +51,6 @@ function check(){
         document.getElementById("input").classList.remove("red")
         compare(curr_num);
         if (res[0] == 0){
-            displayOnDisplay(curr_num, res[2], res[1]);
             addRow(curr_num, res[2], res[1]);
             curr_num = document.getElementById("input").value = "";
         document.getElementById("input").focus();
@@ -179,4 +168,6 @@ function validateInput() {
     }, 1000);
   }
 
-window.onload(startTimer());
+window.onload = function() {
+    startTimer();
+};
